@@ -11,6 +11,7 @@
   </div>
 </nav>
 <h2>List of Products:</h2>
+<div id="searchResults">
 <table class="table">
       <% @product.each do |product| %>
       <tbody class="productRow">
@@ -31,5 +32,6 @@
       </tbody>
       <% end %>
     </table>
+    </div>
     <p>Total Products: <%= @product.all.length%></p>
 
