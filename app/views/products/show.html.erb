@@ -1,0 +1,18 @@
+<div class="d-flex justify-content-center align-items-center">
+<h1>Product Details</h1>
+</div>
+<form>
+  <div class="mb-3">
+    <label for="name" class="form-label">Product Name:</label>
+    <input readonly='null' class="form-control" id="name" aria-describedby="name" value='<%= @product.name %>' >
+  </div>
+  <div class="mb-3">
+    <label for="description" class="form-label">Product Description:</label>
+    <input readonly class="form-control" id="description" aria-describedby="description" value='<%= @product.description %>'>
+  </div>
+  <div class="mb-3">
+      <label for="quantity" class="form-label">Product Quantity:</label>
+  <input readonly class="form-control" type="number" id="quantity" name="quantity" min="1" value='<%= @product.quantity %>'>  </div>
+        <button onclick="location.href='/products'" type="button" class="btn btn-outline-primary">Return</button>
+
+</form>
