@@ -6,8 +6,8 @@
     <form class="d-flex" id="searchForm" role="search">
       <input class="form-control me-2" id="searchInput" type="search" placeholder="Search" aria-label="Search" style="width:100% !important">
       <button class="btn btn-outline-success mx-2" type="submit">Search</button>
-      <button onclick="location.href='/products/new'" type="button" class="btn btn-outline-primary mx-2">Add</button>
-    </form>
+ <a style="text-decoration:none" class="btn btn-outline-primary mx-2" href="<%= new_product_path %>">New</a>    
+ </form>
   </div>
 </nav>
 <h2>List of Products:</h2>
@@ -18,7 +18,7 @@
         <tr>
           <td>
             <div style="display: flex; align-items: center;">
-              <div style="flex: 1;"><%= product.name %></div>
+              <div style="flex: 1;"><a><%= product.name %></div>
               <div class="d-flex justify-content-center align-items-center ">
                 <a style="text-decoration:none" href="<%= product_path(product) %>"><i class="bi bi-eye-fill px-2" style="color: green;"></i></a>
                 <a style="text-decoration:none" href="<%= edit_product_path(product) %>"><i class="bi bi-pencil-square px-2" style="color: orange;"></i></a>

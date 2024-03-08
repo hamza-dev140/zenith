@@ -12,9 +12,10 @@
 </div>
   <div class="mb-3">
 <%= f.label :quantity,class: "form-label"%>
-<%= f.number_field  :quantity, class:"form-control",placeholder:'1',onkeypress:"return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))",required: true %>
+<%= f.number_field  :quantity, class:"form-control",placeholder:'Enter Quantity',onkeypress:"return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))",required: true %>
 </div>
  <div class="mb-3">
  <%= f.submit "Add",class:"btn btn-primary"%>
+<a style="text-decoration:none" class="btn btn-outline-primary mx-2" href="<%= products_path %>">Return</a>
 </div>
 <% end %>
