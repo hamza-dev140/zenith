@@ -16,6 +16,7 @@
       <% @product.each do |product| %>
       <tbody class="productRow">
         <tr>
+              <% unless product.archived? %>
           <td>
             <div style="display: flex; align-items: center;">
               <div style="flex: 1;"><%= product.name %></div>
@@ -26,10 +27,11 @@
               </div>
             </div>
           </td>
+          <%end%>
         </tr>
       </tbody>
       <% end %>
     </table>
     </div>
-    <p>Total Products: <%= @product.all.length%></p>
+<p>Our store has <%= content_tag(:span, Product.public_count, style: "color:orange;font-weight:bold") %> products and counting!</p>
 

@@ -4,7 +4,7 @@
 <form>
   <div class="mb-3">
     <label for="name" class="form-label">Product Name:</label>
-    <input readonly='null' class="form-control" id="name" aria-describedby="name" value='<%= @product.name %>' >
+    <input readonly class="form-control" id="name" aria-describedby="name" value='<%= @product.name %>' >
   </div>
   <div class="mb-3">
     <label for="description" class="form-label">Product Description:</label>
@@ -16,3 +16,15 @@
         <button onclick="location.href='/products'" type="button" class="btn btn-outline-primary">Return</button>
 
 </form>
+<br>
+<div id="container">
+<h4>Comments</h4>
+<%= @product.comments.all.length %>
+</div>
+<div class="container-fluid">
+
+<%= render @product.comments %>
+
+</div>
+<h4>Add a comment:</h4>
+<%= render "comments/form" %>
