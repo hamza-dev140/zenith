@@ -1,8 +1,11 @@
-<div class="d-flex justify-content-center align-items-center">
-  <h1>Zenith</h1>
+<div style="display: flex; justify-content: space-between;">
+  <h1 style="margin: 0 auto;">Zenith</h1>
+  <h1> <%= button_to "", destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' }, style: "text-decoration:none; background: none; border: none; padding: 0; margin-left: 5px;" ,class:"bi bi-box-arrow-right",style:'color:red;background:none;border:none' %></h1>
 </div>
+
+
+
 <nav class="navbar bg-body-tertiary">
-  
   <div class="container-fluid">
     <form class="d-flex" id="searchForm" role="search">
       <input class="form-control me-2" id="searchInput" type="search" placeholder="Search" aria-label="Search" style="width:100% !important">
